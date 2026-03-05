@@ -121,3 +121,34 @@
     </div></div>
     <div id="tips-content" class="grid gap-4"></div>
 </section>
+</main>
+</div>
+<dialog id="settings-modal" class="modal">
+    <div class="modal-box">
+        <h3 class="font-bold text-lg mb-4">⚙️ Settings</h3>
+        <div class="form-control"><label class="label"><span class="label-text">OpenAI API Key</span></label>
+        <input type="password" id="openai-key" class="input input-bordered" placeholder="sk-..."></div>
+        <div class="modal-action">
+            <button class="btn" onclick="hideSettings()">Cancel</button>
+            <button class="btn btn-primary" onclick="saveSettings()">Save</button>
+        </div>
+    </div>
+    <form method="dialog" class="modal-backdrop"><button>close</button></form>
+</dialog>
+<div id="loading" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+    <div class="loading-spinner"></div>
+</div>
+<script>
+function setTheme(t){document.documentElement.setAttribute('data-theme',t);localStorage.setItem('theme',t)}
+document.addEventListener('DOMContentLoaded',()=>{const s=localStorage.getItem('theme');if(s)setTheme(s)});
+function switchSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+document.querySelectorAll('.menu a').forEach(a=>a.classList.remove('active'));
+document.getElementById(id).classList.add('active');document.querySelector(`[data-section="${id}"]`).classList.add('active')}
+function showSettings(){document.getElementById('settings-modal').showModal()}
+function hideSettings(){document.getElementById('settings-modal').close()}
+function showLoading(){document.getElementById('loading').classList.remove('hidden')}
+function hideLoading(){document.getElementById('loading').classList.add('hidden')}
+</script>
+<script src="app.js"></script>
+</body>
+</html>
