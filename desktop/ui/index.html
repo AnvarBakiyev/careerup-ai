@@ -57,3 +57,29 @@
     </div></div>
     <div id="interview-content"></div>
 </section>
+<section id="resume" class="section">
+    <h1 class="text-3xl font-bold mb-6">📄 Resume Optimizer</h1>
+    <div class="card bg-base-100 shadow-xl"><div class="card-body">
+        <div class="form-control mb-4"><label class="label"><span class="label-text">Target Role</span></label>
+        <input type="text" id="resume-role" class="input input-bordered" value="Product Manager"></div>
+        <div class="form-control mb-4"><label class="label"><span class="label-text">Paste Your Resume</span></label>
+        <textarea id="resume-text" class="textarea textarea-bordered h-48" placeholder="Paste resume..."></textarea></div>
+        <button class="btn btn-primary" onclick="analyzeResume()">Analyze Resume</button>
+    </div></div>
+    <div id="resume-results" class="mt-6"></div>
+</section>
+<section id="personality" class="section">
+    <h1 class="text-3xl font-bold mb-6">🧠 Personality Test</h1>
+    <div class="card bg-base-100 shadow-xl mb-6"><div class="card-body">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-control"><label class="label"><span class="label-text">Test Type</span></label>
+            <select id="personality-type" class="select select-bordered">
+                <option value="disc">DISC</option><option value="mbti">MBTI</option><option value="big5">Big Five</option>
+            </select></div>
+            <div class="form-control"><label class="label"><span class="label-text">Target Role</span></label>
+            <input type="text" id="personality-role" class="input input-bordered" placeholder="Product Manager"></div>
+        </div>
+        <button class="btn btn-primary mt-4" onclick="startPersonalityTest()">Start Test</button>
+    </div></div>
+    <div id="personality-content"></div>
+</section>
