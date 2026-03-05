@@ -83,3 +83,41 @@
     </div></div>
     <div id="personality-content"></div>
 </section>
+<section id="roadmap" class="section">
+    <h1 class="text-3xl font-bold mb-6">🗺️ Career Roadmap</h1>
+    <div class="card bg-base-100 shadow-xl mb-6"><div class="card-body">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="form-control"><label class="label"><span class="label-text">Current Role</span></label>
+            <input type="text" id="roadmap-current" class="input input-bordered" placeholder="Software Engineer"></div>
+            <div class="form-control"><label class="label"><span class="label-text">Target Role</span></label>
+            <input type="text" id="roadmap-target" class="input input-bordered" placeholder="Product Manager"></div>
+            <div class="form-control"><label class="label"><span class="label-text">Target Company</span></label>
+            <input type="text" id="roadmap-company" class="input input-bordered" placeholder="Google"></div>
+            <div class="form-control"><label class="label"><span class="label-text">Timeline (months)</span></label>
+            <input type="number" id="roadmap-timeline" class="input input-bordered" value="6" min="1" max="24"></div>
+            <div class="form-control md:col-span-2"><label class="label"><span class="label-text">Hours/week</span></label>
+            <input type="range" id="roadmap-hours" class="range range-primary" min="5" max="40" value="10">
+            <div class="flex justify-between text-xs px-2"><span>5h</span><span>20h</span><span>40h</span></div></div>
+        </div>
+        <button class="btn btn-primary mt-4" onclick="generateRoadmap()">Generate Roadmap</button>
+    </div></div>
+    <div id="roadmap-content"></div>
+</section>
+<section id="tips" class="section">
+    <h1 class="text-3xl font-bold mb-6">💡 Insider Tips</h1>
+    <div class="card bg-base-100 shadow-xl mb-6"><div class="card-body">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="form-control"><label class="label"><span class="label-text">Role</span></label>
+            <input type="text" id="tips-role" class="input input-bordered" value="Product Manager"></div>
+            <div class="form-control"><label class="label"><span class="label-text">Company</span></label>
+            <input type="text" id="tips-company" class="input input-bordered" value="Google"></div>
+            <div class="form-control"><label class="label"><span class="label-text">Topic</span></label>
+            <select id="tips-topic" class="select select-bordered">
+                <option value="interview_prep">Interview Prep</option><option value="resume">Resume Tips</option>
+                <option value="networking">Networking</option><option value="negotiation">Salary Negotiation</option>
+            </select></div>
+        </div>
+        <button class="btn btn-primary mt-4" onclick="getTips()">Get Tips</button>
+    </div></div>
+    <div id="tips-content" class="grid gap-4"></div>
+</section>
